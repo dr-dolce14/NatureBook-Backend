@@ -5670,3 +5670,1854 @@ Processing by Api::V1::OrganismsController#index as */*
 Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1321)
 
 
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 16:46:22 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:46:22 -0400
+Processing by Api::V1::OrganismsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mOrganism Load (1.5ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.32ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 1.5ms | Allocations: 2275)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 18ms (Views: 3.2ms | ActiveRecord: 2.9ms | Allocations: 3511)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:46:31 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:46:37 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 48ms (Views: 43.3ms | ActiveRecord: 1.2ms | Allocations: 1990)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 16:46:42 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 202 Accepted in 210ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1081)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 16:46:44 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.6ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 16:47:01 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:47:01 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (4.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+Processing by Api::V1::UsersController#profile as */*
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.49ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 4.3ms | Allocations: 2196)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 2.0ms | ActiveRecord: 6.7ms | Allocations: 2699)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:47:05 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 1.7ms | ActiveRecord: 3.4ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:47:10 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:47:14 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (39.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 44ms (Views: 2.2ms | ActiveRecord: 39.8ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:47:26 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:47:44 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 16:47:49 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 202 Accepted in 210ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1081)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 16:47:50 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (45.7ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.67ms)
+Completed 200 OK in 57ms (Views: 9.8ms | ActiveRecord: 45.7ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 16:48:17 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.2ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.58ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1321)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:48:17 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:48:25 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 1.7ms | ActiveRecord: 1.5ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 16:48:33 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 202 Accepted in 211ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1077)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 16:48:37 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.02ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 16:53:43 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:53:43 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (6.5ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.53ms)
+Completed 200 OK in 29ms (Views: 18.2ms | ActiveRecord: 6.5ms | Allocations: 1321)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 2.1ms | ActiveRecord: 1.3ms | Allocations: 2070)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:53:58 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 42ms (Views: 1.5ms | ActiveRecord: 1.6ms | Allocations: 1987)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:54:00 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:54:04 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 1.6ms | ActiveRecord: 9.0ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:54:09 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (25.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 29ms (Views: 1.7ms | ActiveRecord: 25.8ms | Allocations: 1985)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:54:16 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.7ms | ActiveRecord: 1.6ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:54:22 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:54:28 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:54:53 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:54:56 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:55:05 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:56:02 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:56:05 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 2.7ms | ActiveRecord: 4.5ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:56:14 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:56:29 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:56:33 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:57:20 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:59:07 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 2.2ms | ActiveRecord: 3.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:59:10 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 76ms (Views: 3.1ms | ActiveRecord: 26.8ms | Allocations: 1987)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:59:12 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.3ms | ActiveRecord: 1.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 16:59:14 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:01:04 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 202 Accepted in 216ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1082)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:01:05 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (1.4ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.15ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.4ms | Allocations: 1321)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:02:13 -0400
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:02:13 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (40.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 46ms (Views: 2.1ms | ActiveRecord: 40.6ms | Allocations: 1984)
+
+
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (1.2ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.2ms | Allocations: 1379)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:02:19 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 2012)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:02:46 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:03:33 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:05:41 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (55.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.52ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 75ms (Views: 6.5ms | ActiveRecord: 55.5ms | Allocations: 1985)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:05:49 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.48ms)
+Completed 202 Accepted in 218ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 1082)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:05:50 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.4ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.63ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:06:05 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.5ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1331)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:06:05 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.33ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:06:11 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1321)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:06:15 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 202 Accepted in 215ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1078)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:06:17 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.2ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:07:46 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:07:47 -0400
+Processing by Api::V1::OrganismsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 447)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 105ms (Views: 1.6ms | ActiveRecord: 93.3ms | Allocations: 4188)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:07:54 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 202 Accepted in 227ms (Views: 0.6ms | ActiveRecord: 8.0ms | Allocations: 6176)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:07:56 -0400
+Processing by Api::V1::OrganismsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 241)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:08:07 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:08:07 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (1.4ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 25ms (Views: 9.2ms | ActiveRecord: 11.1ms | Allocations: 7569)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 28ms (Views: 4.3ms | ActiveRecord: 1.1ms | Allocations: 4130)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:08:11 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.36ms)
+Completed 202 Accepted in 241ms (Views: 1.3ms | ActiveRecord: 2.2ms | Allocations: 6146)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:08:13 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 200 OK in 48ms (Views: 39.0ms | ActiveRecord: 2.5ms | Allocations: 7353)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:09:31 -0400
+Processing by Api::V1::OrganismsController#index as */*
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:09:31 -0400
+  [1m[36mOrganism Load (82.6ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+Completed 200 OK in 89ms (Views: 3.5ms | ActiveRecord: 82.6ms | Allocations: 1945)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 2.2ms | ActiveRecord: 6.5ms | Allocations: 2070)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:09:44 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 22ms (Views: 2.3ms | ActiveRecord: 17.0ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:09:57 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:10:01 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:10:02 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (78.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 83ms (Views: 2.0ms | ActiveRecord: 78.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:10:14 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (21.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 26ms (Views: 2.7ms | ActiveRecord: 21.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:10:16 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:10:18 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:10:21 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:10:29 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.59ms)
+Completed 202 Accepted in 216ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1082)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:10:31 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.7ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.8ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.7ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:11:04 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:11:04 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.6ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 1334)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (23.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 27ms (Views: 1.6ms | ActiveRecord: 23.5ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:11:07 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:11:15 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:11:21 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 202 Accepted in 210ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 1078)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:11:22 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.04ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:11:51 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:11:51 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (5.4ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.77ms)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 5.4ms | Allocations: 1704)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (26.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 34ms (Views: 2.5ms | ActiveRecord: 26.9ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:11:55 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:11:57 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (81.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 85ms (Views: 1.9ms | ActiveRecord: 81.3ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:12:02 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.3ms)
+Completed 202 Accepted in 210ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 1079)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:12:03 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.2ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1322)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:12:47 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:12:47 -0400
+Processing by Api::V1::OrganismsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 18ms (Views: 2.2ms | ActiveRecord: 13.6ms | Allocations: 1984)
+
+
+  [1m[36mOrganism Load (31.8ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 34ms (Views: 2.1ms | ActiveRecord: 31.8ms | Allocations: 3533)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:12:52 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:12:57 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 208ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1078)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:12:59 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.2ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:14:01 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:14:01 -0400
+Processing by Api::V1::UsersController#profile as */*
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mOrganism Load (4.6ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.95ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 4.6ms | Allocations: 2892)
+
+
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 15ms (Views: 5.6ms | ActiveRecord: 4.6ms | Allocations: 3544)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:14:07 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 202 Accepted in 212ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1078)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:14:09 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:14:23 -0400
+Processing by Api::V1::OrganismsController#index as */*
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:14:23 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mOrganism Load (23.7ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 200 OK in 28ms (Views: 4.0ms | ActiveRecord: 23.7ms | Allocations: 2425)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 2.1ms | ActiveRecord: 2.4ms | Allocations: 3370)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:14:27 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:14:28 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:14:41 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 202 Accepted in 214ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 1077)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:14:43 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.5ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:14:56 -0400
+Processing by Api::V1::OrganismsController#index as */*
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:14:56 -0400
+  [1m[36mOrganism Load (16.1ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.0ms)
+Completed 200 OK in 20ms (Views: 3.3ms | ActiveRecord: 16.1ms | Allocations: 1667)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.4ms | ActiveRecord: 2.0ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:14:58 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:15:03 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 202 Accepted in 212ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1077)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:15:05 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:17:33 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:17:33 -0400
+Processing by Api::V1::OrganismsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mOrganism Load (2.0ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.54ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 2.0ms | Allocations: 1688)
+
+
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 19ms (Views: 5.3ms | ActiveRecord: 11.3ms | Allocations: 3387)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:17:42 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:18:25 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.38ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 21ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:24:02 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (14.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.75ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 40ms (Views: 9.6ms | ActiveRecord: 14.3ms | Allocations: 1987)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:24:09 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 202 Accepted in 209ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1078)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:24:29 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:24:29 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (9.6ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.13ms)
+Completed 200 OK in 13ms (Views: 3.2ms | ActiveRecord: 9.6ms | Allocations: 1321)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 1.4ms | ActiveRecord: 0.7ms | Allocations: 2070)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:24:35 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 2.2ms | ActiveRecord: 1.4ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:24:40 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 213ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1081)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:24:41 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.7ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 1321)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:25:35 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:25:35 -0400
+Processing by Api::V1::UsersController#profile as */*
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.62ms)
+  [1m[36mOrganism Load (11.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+Filter chain halted as :authorized rendered or redirected
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+Completed 401 Unauthorized in 27ms (Views: 5.2ms | ActiveRecord: 9.5ms | Allocations: 3355)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.78ms)
+Completed 200 OK in 27ms (Views: 14.4ms | ActiveRecord: 11.3ms | Allocations: 3106)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:25:40 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (53.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 59ms (Views: 2.7ms | ActiveRecord: 53.0ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:25:50 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.5ms | ActiveRecord: 1.0ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:25:57 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:26:01 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 2.1ms | ActiveRecord: 4.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:26:12 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:26:45 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.29ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 31ms (Views: 4.0ms | ActiveRecord: 14.4ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:27:03 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.72ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.2ms | ActiveRecord: 1.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:27:06 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 2.5ms | ActiveRecord: 5.1ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:27:15 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:27:27 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:27:34 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 2.0ms | ActiveRecord: 2.5ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:27:38 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:27:43 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 23ms (Views: 6.3ms | ActiveRecord: 14.4ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:27:45 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:27:57 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1985)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:00 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:03 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:05 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 19ms (Views: 1.5ms | ActiveRecord: 15.9ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:07 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 2.0ms | ActiveRecord: 1.0ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:09 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:12 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:25 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 2.2ms | ActiveRecord: 2.5ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:31 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 1.9ms | ActiveRecord: 3.9ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:34 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:45 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:28:57 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 2.1ms | ActiveRecord: 2.8ms | Allocations: 1984)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:29:03 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:29:10 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 202 Accepted in 212ms (Views: 0.7ms | ActiveRecord: 1.3ms | Allocations: 1079)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:29:11 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.01ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1321)
+
+
+Started POST "/api/v1/organisms" for ::1 at 2020-08-27 17:30:34 -0400
+Processing by Api::V1::OrganismsController#create as JSON
+  Parameters: {"organism"=>{"category"=>"Amphibian", "common_name"=>"Grey treefrog", "scientific_name"=>"Hyla  versicolor", "image"=>"https://www.ncwildlife.org/Portals/0/Learning/images/Species/Amphibians/Copes%20Gray%20treefrog%20Jeff%20Hall_with%20photo%20credit.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:11:in `create'
+  [1m[36mOrganism Create (11.6ms)[0m  [1m[32mINSERT INTO "organisms" ("common_name", "scientific_name", "image", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["common_name", "Grey treefrog"], ["scientific_name", "Hyla  versicolor"], ["image", "https://www.ncwildlife.org/Portals/0/Learning/images/Species/Amphibians/Copes%20Gray%20treefrog%20Jeff%20Hall_with%20photo%20credit.jpg"], ["created_at", "2020-08-27 21:30:34.474354"], ["updated_at", "2020-08-27 21:30:34.474354"], ["category", "Amphibian"]]
+  ↳ app/controllers/api/v1/organisms_controller.rb:11:in `create'
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:11:in `create'
+[active_model_serializers] Rendered OrganismSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 201 Created in 37ms (Views: 0.8ms | ActiveRecord: 20.0ms | Allocations: 2854)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:30:53 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.6ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 1493)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:30:53 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 1.9ms | ActiveRecord: 1.7ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:31:01 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 202 Accepted in 211ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1078)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:31:03 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.5ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1477)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:31:18 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:31:18 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.87ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1477)
+
+
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 2.9ms | ActiveRecord: 0.8ms | Allocations: 2070)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:31:24 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.5ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.5ms | Allocations: 1480)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:31:29 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 202 Accepted in 210ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1081)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:31:31 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1477)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:36:42 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:36:42 -0400
+Processing by Api::V1::OrganismsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mOrganism Load (1.8ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.09ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.8ms | Allocations: 2839)
+
+
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 3.8ms | ActiveRecord: 0.8ms | Allocations: 3543)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:37:58 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.43ms)
+Completed 202 Accepted in 211ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 1081)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:38:00 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.4ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.27ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 1477)
+
+
+Started POST "/api/v1/organisms" for ::1 at 2020-08-27 17:38:33 -0400
+Processing by Api::V1::OrganismsController#create as JSON
+  Parameters: {"organism"=>{"category"=>"Reptile", "common_name"=>"Northern Water Snake", "scientific_name"=>"Nerodia sipedon", "image"=>"https://nature.mdc.mo.gov/sites/default/files/media/images/2010/05/northern_watersnake_1-6-15.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:11:in `create'
+  [1m[36mOrganism Create (1.1ms)[0m  [1m[32mINSERT INTO "organisms" ("common_name", "scientific_name", "image", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["common_name", "Northern Water Snake"], ["scientific_name", "Nerodia sipedon"], ["image", "https://nature.mdc.mo.gov/sites/default/files/media/images/2010/05/northern_watersnake_1-6-15.jpg"], ["created_at", "2020-08-27 21:38:33.800282"], ["updated_at", "2020-08-27 21:38:33.800282"], ["category", "Reptile"]]
+  ↳ app/controllers/api/v1/organisms_controller.rb:11:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:11:in `create'
+[active_model_serializers] Rendered OrganismSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 201 Created in 10ms (Views: 0.7ms | ActiveRecord: 1.9ms | Allocations: 2744)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:39:09 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.4ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.92ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1634)
+
+
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:39:09 -0400
+Processing by Api::V1::UsersController#profile as */*
+  [1m[36mUser Load (19.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 25ms (Views: 2.5ms | ActiveRecord: 19.9ms | Allocations: 1984)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:39:13 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 202 Accepted in 211ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1077)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:39:15 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.2ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1634)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:41:54 -0400
+Processing by Api::V1::OrganismsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.32ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 446)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:42:02 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 202 Accepted in 244ms (Views: 0.8ms | ActiveRecord: 15.4ms | Allocations: 8157)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:42:03 -0400
+Processing by Api::V1::OrganismsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.34ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 210)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:42:06 -0400
+Started GET "/api/v1/profile" for ::1 at 2020-08-27 17:42:06 -0400
+Processing by Api::V1::OrganismsController#index as */*
+Processing by Api::V1::UsersController#profile as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 1280)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 401 Unauthorized in 36ms (Views: 31.8ms | ActiveRecord: 0.8ms | Allocations: 2283)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:44:13 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 202 Accepted in 227ms (Views: 0.7ms | ActiveRecord: 4.9ms | Allocations: 8298)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:44:15 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (1.2ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.82ms)
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 3.3ms | Allocations: 7629)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:55:15 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (2.0ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.48ms)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 2.0ms | Allocations: 1692)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-08-27 17:55:25 -0400
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"Pigeon", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Pigeon"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.39ms)
+Completed 202 Accepted in 238ms (Views: 0.9ms | ActiveRecord: 10.1ms | Allocations: 1106)
+
+
+Started GET "/api/v1/organisms" for ::1 at 2020-08-27 17:55:27 -0400
+Processing by Api::V1::OrganismsController#index as */*
+  [1m[36mOrganism Load (0.6ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms"[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.46ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 1634)
+
+
+Started POST "/api/v1/organisms" for ::1 at 2020-08-27 17:56:17 -0400
+Processing by Api::V1::OrganismsController#create as JSON
+  Parameters: {"organism"=>{"category"=>"Reptile", "common_name"=>"Box Turtle", "scientific_name"=>"Terrapene carolina", "image"=>"https://www.thesprucepets.com/thmb/yLjRGeezMc9poyZ_0TJE2C7b_1s=/1450x1450/smart/filters:no_upscale()/eastern-box-turtle-65645_1920-595036823df78cae81e62b90.jpg"}}
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:11:in `create'
+  [1m[36mOrganism Create (12.2ms)[0m  [1m[32mINSERT INTO "organisms" ("common_name", "scientific_name", "image", "created_at", "updated_at", "category") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["common_name", "Box Turtle"], ["scientific_name", "Terrapene carolina"], ["image", "https://www.thesprucepets.com/thmb/yLjRGeezMc9poyZ_0TJE2C7b_1s=/1450x1450/smart/filters:no_upscale()/eastern-box-turtle-65645_1920-595036823df78cae81e62b90.jpg"], ["created_at", "2020-08-27 21:56:17.402384"], ["updated_at", "2020-08-27 21:56:17.402384"], ["category", "Reptile"]]
+  ↳ app/controllers/api/v1/organisms_controller.rb:11:in `create'
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/organisms_controller.rb:11:in `create'
+[active_model_serializers] Rendered OrganismSerializer with ActiveModelSerializers::Adapter::Attributes (1.33ms)
+Completed 201 Created in 49ms (Views: 3.2ms | ActiveRecord: 19.8ms | Allocations: 2851)
+
+
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mOrganism Load (1.5ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms" WHERE "organisms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSighting Create (21.3ms)[0m  [1m[32mINSERT INTO "sightings" ("user_id", "organism_id", "location", "lat", "lng", "habitat", "weather", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["user_id", 25], ["organism_id", 1], ["location", "Next to the ditch behind the playground"], ["lat", 35.233749], ["lng", -82.734299], ["habitat", "Moist ground bordering a wetland"], ["weather", "overcast, high humidity"], ["date", "August 27, 2020 at 9am"], ["created_at", "2020-08-28 16:03:21.380051"], ["updated_at", "2020-08-28 16:03:21.380051"]]
+  [1m[35m (31.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSighting Load (1.6ms)[0m  [1m[34mSELECT "sightings".* FROM "sightings" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/sightings" for ::1 at 2020-08-28 12:04:21 -0400
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SightingsController#index as */*
+  Parameters: {"organism"=>{"category"=>"Amphibian", "common_name"=>"Bullfrog", "scientific_name"=>"Lithobates catesbeianus", "image"=>"https://upload.wikimedia.org/wikipedia/commons/a/aa/North-American-bullfrog1.jpg"}, "sighting"=>{}}
+  [1m[36mSighting Load (0.4ms)[0m  [1m[34mSELECT "sightings".* FROM "sightings"[0m
+  ↳ app/controllers/api/v1/sightings_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 4.1ms | Allocations: 9777)
+
+
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/sightings" for ::1 at 2020-08-28 12:11:14 -0400
+Processing by Api::V1::SightingsController#create as */*
+  Parameters: {"sighting"=>{"user_id"=>25, "organism_id"=>7, "location"=>"Oskar Blues Brewery", "lat"=>35.25329, "lng"=>-82.70665, "habitat"=>"on the patio of the brewery, surrounded by tall grass with moist areas all around", "weather"=>"had just finished raining", "date"=>"June 25, 2018, at 7pm"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sightings_controller.rb:11:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sightings_controller.rb:11:in `create'
+  [1m[36mOrganism Load (0.3ms)[0m  [1m[34mSELECT "organisms".* FROM "organisms" WHERE "organisms"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sightings_controller.rb:11:in `create'
+  [1m[36mSighting Create (1.0ms)[0m  [1m[32mINSERT INTO "sightings" ("user_id", "organism_id", "location", "lat", "lng", "habitat", "weather", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["user_id", 25], ["organism_id", 7], ["location", "Oskar Blues Brewery"], ["lat", 35.25329], ["lng", -82.70665], ["habitat", "on the patio of the brewery, surrounded by tall grass with moist areas all around"], ["weather", "had just finished raining"], ["date", "June 25, 2018, at 7pm"], ["created_at", "2020-08-28 16:11:14.485426"], ["updated_at", "2020-08-28 16:11:14.485426"]]
+  ↳ app/controllers/api/v1/sightings_controller.rb:11:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sightings_controller.rb:11:in `create'
+[active_model_serializers] Rendered SightingSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 201 Created in 121ms (Views: 1.7ms | ActiveRecord: 17.6ms | Allocations: 21857)
+
+
+Started GET "/api/v1/sightings" for ::1 at 2020-08-28 12:11:23 -0400
+Processing by Api::V1::SightingsController#index as */*
+  Parameters: {"sighting"=>{"user_id"=>25, "organism_id"=>7, "location"=>"Oskar Blues Brewery", "lat"=>35.25329, "lng"=>-82.70665, "habitat"=>"on the patio of the brewery, surrounded by tall grass with moist areas all around", "weather"=>"had just finished raining", "date"=>"June 25, 2018, at 7pm"}}
+  [1m[36mSighting Load (0.5ms)[0m  [1m[34mSELECT "sightings".* FROM "sightings"[0m
+  ↳ app/controllers/api/v1/sightings_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1478)
+
+
+Started GET "/api/v1/sightings/2" for ::1 at 2020-08-28 12:11:32 -0400
+Processing by Api::V1::SightingsController#show as */*
+  Parameters: {"sighting"=>{"user_id"=>25, "organism_id"=>7, "location"=>"Oskar Blues Brewery", "lat"=>35.25329, "lng"=>-82.70665, "habitat"=>"on the patio of the brewery, surrounded by tall grass with moist areas all around", "weather"=>"had just finished raining", "date"=>"June 25, 2018, at 7pm"}, "id"=>"2"}
+  [1m[36mSighting Load (0.2ms)[0m  [1m[34mSELECT "sightings".* FROM "sightings" WHERE "sightings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sightings_controller.rb:31:in `set_params'
+[active_model_serializers] Rendered SightingSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1068)
+
+
+Started GET "/api/v1/sightings/1" for ::1 at 2020-08-28 12:11:37 -0400
+Processing by Api::V1::SightingsController#show as */*
+  Parameters: {"sighting"=>{"user_id"=>25, "organism_id"=>7, "location"=>"Oskar Blues Brewery", "lat"=>35.25329, "lng"=>-82.70665, "habitat"=>"on the patio of the brewery, surrounded by tall grass with moist areas all around", "weather"=>"had just finished raining", "date"=>"June 25, 2018, at 7pm"}, "id"=>"1"}
+  [1m[36mSighting Load (0.3ms)[0m  [1m[34mSELECT "sightings".* FROM "sightings" WHERE "sightings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sightings_controller.rb:31:in `set_params'
+[active_model_serializers] Rendered SightingSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 933)
+
+
+  [1m[36mSighting Load (1.1ms)[0m  [1m[34mSELECT "sightings".* FROM "sightings" LIMIT $1[0m  [["LIMIT", 11]]

@@ -3,8 +3,8 @@ class Api::V1::OrganismsController < ApplicationController
     before_action :set_params, only: [:show, :update]
 
     def index
-    @organism = Organism.all 
-    render json: @organism
+    @organisms = Organism.all 
+    render json: @organisms
     end
 
     def create
