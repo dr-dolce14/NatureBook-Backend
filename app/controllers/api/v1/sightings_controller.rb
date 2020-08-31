@@ -1,10 +1,10 @@
 class Api::V1::SightingsController < ApplicationController
     skip_before_action :authorized
-    before_action :set_params, only: [:show, :update]
+    before_action :set_params, only: [:show, :update, :destroy]
 
     def index
     @sightings = Sighting.all 
-    render json: @sightings, include: [:users, :organisms]
+    render json: @sightings, include: [:user, :organism]
     end
 
     def create
@@ -14,12 +14,21 @@ class Api::V1::SightingsController < ApplicationController
 
     def update
     @sighting.update(sighting_params)
+    byebug
     render json: @sighting, status: 200
+  
     end
 
     def show
     render json: @sighting, status: 200
     end
+
+    def destroy
+    sightingId = @sighting.id
+    @sighting.destroy
+    render json: {message: "deleted", sightingId:sightingId}
+    end
+
 
     private
 
