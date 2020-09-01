@@ -1,3 +1,3 @@
 class SightingSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :organism_id, :location, :lat, :lng, :habitat, :weather, :date
+  attributes :id, :user, :organism, :location, :lat, :lng, :habitat, :weather, :date, :comments
 end

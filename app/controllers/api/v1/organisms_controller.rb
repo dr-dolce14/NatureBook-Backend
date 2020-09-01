@@ -4,7 +4,7 @@ class Api::V1::OrganismsController < ApplicationController
 
     def index
     @organisms = Organism.all 
-    render json: @organisms
+    render json: @organisms, include: :sightings
     end
 
     def create

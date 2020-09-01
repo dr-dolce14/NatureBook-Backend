@@ -4,7 +4,7 @@ class Api::V1::SightingsController < ApplicationController
 
     def index
     @sightings = Sighting.all 
-    render json: @sightings, include: [:user, :organism]
+    render json: @sightings, include: [:organisms, :users, :comments] 
     end
 
     def create
@@ -14,7 +14,6 @@ class Api::V1::SightingsController < ApplicationController
 
     def update
     @sighting.update(sighting_params)
-    byebug
     render json: @sighting, status: 200
   
     end

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get '/profile', to: 'users#profile'
       resources :organisms
       resources :sightings
+      resources :comments
     end
   end
 end
