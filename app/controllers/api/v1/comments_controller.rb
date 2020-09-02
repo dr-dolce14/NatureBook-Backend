@@ -19,7 +19,7 @@ class Api::V1::CommentsController < ApplicationController
     end
 
     def show
-    render json: @comment, status: 200
+    render json: @comment, include: :user, status: 200
     end
 
     def destroy
